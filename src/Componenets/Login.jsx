@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Login.css'
 
 const Login = () => {
+
+  const [action,setAction] = useState("Login")
+
   return (
     <div class="container">
 
       <div className="header">
-        <h1>Sign Up</h1>
+        <h1>{action}</h1>
       </div>
 
       <div className="fields">
-
-        <div className="text">
+        {action==="Login"?<div></div>:<div className="text">
           <h3>Name</h3>
           <input type="text" />
         </div>
-
+        }
+        
         <div className="text">
           <h3>Email</h3>
           <input type="email" />
